@@ -5,9 +5,9 @@ metadata:
   namespace: default
 spec:
   interval: 1m
+  releaseName: nginx
   chart:
     spec:
-      releaseName: nginx
       chart: ./charts/nginx
       sourceRef:
         kind: GitRepository
