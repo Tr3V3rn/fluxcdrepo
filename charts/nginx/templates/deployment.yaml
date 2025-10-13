@@ -51,7 +51,7 @@ spec:
       volumes:
         - name: html
           configMap:
-            name: {{ .Release.Name | default "nginx" }}-index-html
+            name: nginx-index-html
           livenessProbe:
             {{- toYaml . | nindent 12 }}
           {{- end }}
