@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://www.schemastore.org/prettierrc.json": "file:///c%3A/fluxcdrepo/clusters/my-cluster/nginx-helm-release.yaml"
+    }
+}
