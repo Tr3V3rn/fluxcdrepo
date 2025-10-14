@@ -22,5 +22,5 @@ spec:
       database: "mydatabase"
     resources:
       requests:
-        memory: "256Mi"
-        cpu: "100m"
+        memory: "512Mi"
+        cpu: "500m"
