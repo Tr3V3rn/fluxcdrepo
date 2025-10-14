@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: mysql
-      version: '12.2.0'
+      version: '14.0.3'
       sourceRef:
         kind: HelmRepository
         name: mysql
@@ -24,5 +24,3 @@ spec:
       requests:
         memory: "512Mi"
         cpu: "500m"
-    image:
-      tag: "8.0.35-debian-11-r0" 
