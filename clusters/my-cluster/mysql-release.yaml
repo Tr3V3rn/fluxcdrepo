@@ -19,3 +19,7 @@ spec:
       username: "myuser"
       password: "mypassword"
       database: "mydatabase"
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
