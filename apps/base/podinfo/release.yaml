@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: podinfo
+  namespace: default
+spec:
+  releaseName: podinfo
+  interval: 50m
+  chart:
+    spec:
+      chart: podinfo
+      sourceRef:
+        kind: HelmRepository
+        name: podinfo
+        namespace: default
+      interval: 1m
+  values:
+    ingress:
+      enabled: true
+      classname: nginx
+      hosts: []

@@ -5,3 +5,9 @@ resources:
   - ../base/apache
   - ../base/busybox
   - ../base/mysql
+  - ../base/podinfo
+patches:
+  - path: podinfo-values.yaml
+    target:
+      kind: HelmRelease
+      name: podinfo
