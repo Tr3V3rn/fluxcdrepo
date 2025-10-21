@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  retryInterval: 1m
+  retryInterval: 5m
   path: ./infrastructure/controllers
   sourceRef:
     kind: GitRepository
@@ -13,3 +13,11 @@ spec:
   prune: true
   wait: true
   timeout: 5m0s
+  patches:
+  - patch: |
+      - op: replace
+        path: /spec/values/ingress/hosts/0/host
+        value: "dashboard.production"
+    target:
+      kind: HelmRelease
+      name: ww-gitops
