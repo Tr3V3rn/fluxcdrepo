@@ -9,7 +9,8 @@ spec:
       version: ">=6.0.0"
   values:
     ingress:
-      hosts: podinfo.staging
-      paths:
-        - path: "/"
-          pathType: Prefix
+      hosts: 
+        - host: podinfo.staging
+          paths:
+            - path: "/"
+              pathType: Prefix
